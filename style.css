@@ -186,10 +186,10 @@ h2 {
 .héber {
                 display: flex;
                 flex-direction: column;
-                width: 64%;
+                width: 62%;
                 border: solid; border-color: #F2F2F2; background-color: #F2F2F2;
                 border-radius: 30px;
-                margin: 0rem 3rem 0rem 0rem;           
+                margin: 1rem 3rem 0rem 0rem;           
 }
 
 .héber_1, .héber_2 {
@@ -256,6 +256,7 @@ a.p1:hover, a.p2:hover, a.p3:hover, a.p4:hover, a.p5:hover, a.p6:hover {
                 width: 32%;
                 border: solid; border-color: #F2F2F2; background-color: #F2F2F2;
                 border-radius: 30px;
+                margin-top: 1rem;
 }
 
 .titre_pop {
@@ -370,6 +371,7 @@ a.p7:hover, a.p8:hover, a.p9:hover {
 .bloc4 {
                 display: flex;
                 width: 100%;
+                flex-direction: column;
                 
 }
 
@@ -453,26 +455,12 @@ a.p7:hover, a.p8:hover, a.p9:hover {
                 object-fit: cover;
 }
 
-.moyenne {
-                height: 18rem;
-                width: 100%;
-                position: relative;
-                object-fit: cover;
-}
-
 .petite {
                 height: 12rem;
                 width: 100%;
                 position: relative;
                 object-fit: cover;
 }
-
-.très_petite {
-                height: 8rem;
-                width: 100%;
-                position: relative;
-                object-fit: cover;
-} 
 
 /*fin section activité*/
 
@@ -501,6 +489,24 @@ a.p7:hover, a.p8:hover, a.p9:hover {
 /*fin section footer*/
 
 /*début responsive*/
+
+@media all and (max-width: 1100px) {
+
+    .bloc3 {
+        flex-direction: column-reverse;
+    }
+
+    .pop {
+        width: 100%;
+    }
+
+    .héber {
+        width: 100%;
+    }
+
+
+}
+
 @media all and (max-width: 768px) {
 
     main {
@@ -509,6 +515,8 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         margin-right: auto;
         margin-left: auto;
     }
+
+    /*menu*/
 
     .bloc1 {
         display: none;
@@ -536,27 +544,18 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         font-weight: 600;
     }
 
-    .bloc1_mobile nav:last-of-type {
-        justify-content: space-around;
+    .bloc1_mobile nav:last-of-type a {
+        
         border-bottom: #f2f2f2 solid;
-        padding-bottom: 0.7rem;
-        margin-top: 1rem;
-        
-        
-    }
-
-    .bloc1_mobile nav:last-of-type a:first-of-type:active {
-        border-bottom: #0065fc solid;
-        padding-bottom: 0.6rem;
-        margin: 0 -15px -15px -26px;
+        padding-bottom: 0.6rem;       
         width: 50%;
         text-align: center;
     }
 
-    .bloc1_mobile nav:last-of-type a:last-of-type:active {
+    .bloc1_mobile nav:last-of-type a:active {
         border-bottom: #0065fc solid;
+        color: #0065FC;
         padding-bottom: 0.6rem;
-        margin: 0 -15px -15px 0;
         width: 50%;
         text-align: center;
     }
@@ -570,6 +569,8 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         font-size: 1rem;
         text-align: justify;
     }
+
+    /*form*/
 
     form div:nth-of-type(3) {
         display: none;
@@ -596,6 +597,8 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         margin-right: -3rem;
     }
 
+    /*filtre*/
+
     .bloc2 {
         flex-direction: column;
     }
@@ -604,6 +607,8 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         text-align: justify;
         
     }
+
+    /*populaire*/
 
     .bloc3 {
         flex-direction: column-reverse;
@@ -619,9 +624,15 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 30%);
     }
 
+    .vignette_populaire img {
+        width: 150px;
+    }
+
     .p7 p, .p8 p, .p9 p {
         font-size: 0.9rem;
     }
+
+    /*héber*/
 
     .héber {
         flex-direction: column;
@@ -636,8 +647,8 @@ a.p7:hover, a.p8:hover, a.p9:hover {
     }
 
     .p1, .p2, .p3, .p4, .p5, .p6 {
-        width: 90%;
-        height: 15rem;
+        width: 95%;
+        height: 16rem;
         box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 30%);
     }
 
@@ -645,31 +656,49 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         padding-bottom: 10px;
     }
 
+ /*activité*/
+
     .bloc4 {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     .structure_photo {
+        display: flex;
         flex-direction: column;
         width: 100%;
     }
 
     .photo_1, .photo_2_3, .photo_4, .photo_5_6 {
         max-width: 100%;
+        height: auto;
         margin-bottom: 1rem;
+        margin: 1rem;
     }
 
-    .grande, .moyenne, .petite {
-        height: 14rem;
+    .grande, .petite {
+        height: 10rem;
+        width: 100%;
         margin-bottom: 1rem;
     }
 
     .bas_page {
         flex-direction: column;
         padding-left: 0rem;
-        
     }
 
+}
+
+@media all and (max-width: 480px) {
+
+    .vignette_populaire img {
+        width: 150px;
+    }
+
+    .p1, .p2, .p3, .p4, .p5, .p6 {
+        width: 90%;
+    }
 }
  
 
