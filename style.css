@@ -34,10 +34,6 @@ h1, h2, h3, h4, h5, h6 {
                justify-content: space-between;
 }
 
-.bloc1_mobile {
-                display: none;
-}
-
 .menu1 {
                display: flex;
                padding: 0;
@@ -222,7 +218,7 @@ form div:last-of-type {
                 flex-direction: column;
                 border: solid 2px; border-color: #fff; background-color: #fff;
                 border-radius: 30px;
-                border-spacing: auto;
+                
                 margin: 1rem;
                 padding: 0.250rem;
                 width: 27.5%;
@@ -337,9 +333,7 @@ a.p7:hover, a.p8:hover, a.p9:hover {
 .description {
                 display: flex;
                 flex-direction: column;
-                justify-content: baseline;
                 position: relative;
-                align-items: left;
 }
 
 .vignette_populaire .étoile {
@@ -543,38 +537,52 @@ a.p7:hover, a.p8:hover, a.p9:hover {
     /*menu*/
 
     .bloc1 {
-        display: none;
+        flex-direction: column;
     }
 
-    .bloc1_mobile {
-        display: block; 
+    .bloc1 img {
+        max-width: 6rem;
+        margin-left: 30px;
     }
 
-    .bloc1_mobile a {
+    .bloc1 a {
         text-decoration: none;
         color: #000;
+        padding-top: 15px;
     }
 
-    .bloc1_mobile nav {
+    .bloc1 .sub {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: none;
+        text-align: right;
+        padding-right: 30px;
+        padding-top: 20px;
+    }
+
+    .bloc1 .sub:active {
+        border: none;
+    }
+
+    .bloc1 nav {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
     }
 
-    .bloc1_mobile nav:first-of-type a:nth-of-type(2) {
-        color: #0065fc;
-        font-weight: 600;
+    .bloc1 nav:first-of-type a:nth-of-type(2) {
         margin-right: 10px;
     }
 
-    .bloc1_mobile nav:first-of-type a:nth-of-type(1) {
+    .bloc1 nav:first-of-type a:nth-of-type(1) {
         margin-left: 10px;
     }
 
-    .bloc1_mobile nav:last-of-type a {
+    .bloc1 nav a {
         
         border-bottom: #f2f2f2 solid;
         padding-bottom: 0.6rem;       
@@ -582,7 +590,13 @@ a.p7:hover, a.p8:hover, a.p9:hover {
         text-align: center;
     }
 
-    .bloc1_mobile nav:last-of-type a:active {
+    .bloc1 nav a:hover {
+        border-top: none;
+        padding-top: 15px;
+        
+    }
+
+    .bloc1 nav a:active {
         border-bottom: #0065fc solid;
         color: #0065FC;
         padding-bottom: 0.6rem;
